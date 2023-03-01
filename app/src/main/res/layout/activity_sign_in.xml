@@ -65,8 +65,7 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="#8F8F8F"
             android:inputType="number"
-            android:maxLength="18"
-            android:text="+91     "
+            android:maxLength="10"
             android:textSize="24dp"
             android:textStyle="bold" />
 
@@ -150,7 +149,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/btnSignInApple"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_design"
             android:gravity="center"

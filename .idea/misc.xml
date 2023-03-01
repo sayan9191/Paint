@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/drawable/back.xml" value="0.126" />
         <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/drawable/button_design.xml" value="0.1415" />
+        <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/drawable/details_icon.xml" value="0.126" />
         <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/drawable/icon.xml" value="0.157" />
-        <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/layout/activity_paint_page.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
+        <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/layout/activity_sign_in.xml" value="0.18" />
         <entry key="..\:/Users/SayanMandal/AndroidStudioProjects/Paint/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
       </map>
     </option>

@@ -2,7 +2,10 @@ package com.example.paint;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -18,9 +21,7 @@ public class signUp extends AppCompatActivity {
     TextView btnSignUP,btnSignIN;
     EditText edtxtFName,edtxtLName,edittxtMobileNo,edtxtEmail,edtxtGender;
     boolean isEmailValid= false;
-
-
-
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,9 @@ public class signUp extends AppCompatActivity {
         edittxtMobileNo= findViewById(R.id.edittxtMobileNo);
         edtxtEmail= findViewById(R.id.edtxtEmail);
         edtxtGender= findViewById(R.id.edtxtGender);
+        sharedPreferences= getSharedPreferences("MyUserPrefs",Context.MODE_PRIVATE);
+
+
         //
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         edtxtEmail.addTextChangedListener(new TextWatcher() {
@@ -93,6 +97,8 @@ public class signUp extends AppCompatActivity {
         });
     }
 
+
+    @SuppressLint("WrongConstant")
     private void createUser(){
         String fName=edtxtFName.getText().toString();
         String LName=edtxtLName.getText().toString();
@@ -123,13 +129,18 @@ public class signUp extends AppCompatActivity {
             edtxtGender.requestFocus();
         }
         else{
-            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-            intent.putExtra("key1",fName);
-            intent.putExtra("key2",Mobile);
-            intent.putExtra("key3",Email);
-            intent.putExtra("key5",Gender);
+            Intent intent= new Intent(getApplicationContext(),MainActivity.class);
+
+            SharedPreferences.Editor editor= sharedPreferences.edit();
+            editor.putString("key1",fName);
+            editor.putString("key2",Mobile);
+            editor.putString("key3",Email);
+            editor.putString("key5",Gender);
+            editor.commit();
             startActivity(intent);
+            finish();
         }
     }
+
 
 }
